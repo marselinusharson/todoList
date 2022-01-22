@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TodoList</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form id="todoForm">
+    <h1>TODOLIST APP</h1>
+    <form id="todoForm" class="todoForm">
       <table>
         <tbody>
           <tr>
@@ -16,13 +18,13 @@
           </tr>
           <tr>
             <td></td>
-            <td><input type="submit" value="Add" /></td>
+            <td><input class="submit" type="submit" value="Add" /></td>
           </tr>
         </tbody>
       </table>
     </form>
     <h1>TodoList</h1>
-    <table>
+    <table id="result">
       <thead>
         <th>Filter:</th>
         <th><input type="text" name="search" id="search" placeholder="filter" /></th>
@@ -35,7 +37,14 @@
       </tbody>
     </table>
     <script>
+      function clearfirstTodo (){
+            const todoListBody = document.getElementById("todoListBody" )
+            while (todoListBody.firstChild){
+                todoListBody.removeChild(todoListBody.firstChild)
+            }
+        }
       function displayTodoList() {
+        clearfirstTodo()
         for (let i = 0; i < todoList.length; i++) {
           const todo = todoList[i];
           const tr = document.createElement("tr")
