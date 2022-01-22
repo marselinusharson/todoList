@@ -1,0 +1,30 @@
+* {
+  margin: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.todoForm, #result {
+  padding: 10px;
+}
+.todoForm label {
+  padding: 5px;
+}
+.todoForm input#todo, #search {
+    border-radius: 1rem;
+    padding: 5px;
+    border:2px solid rgb(15, 153, 153);
+}
+.todoForm .submit {
+    padding: 3px;
+    cursor: pointer;
+    width: 50px;
+    border-radius: 1em;
+    background-color: rgb(15, 153, 153) ;
+    color  :aliceblue;
+
+}
